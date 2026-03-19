@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>KPA Report</title>
+</head>
+<body>
+    <h1>Kernel Performance Report</h1>
+
+    <h2>F2FS</h2>
+    <pre>{{ data.f2fs }}</pre>
+
+    <h2>IO</h2>
+    <pre>{{ data.io }}</pre>
+
+    <h2>Issues</h2>
+    <ul>
+    {% for i in data.f2fs.issues %}
+        <li>{{ i }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
